@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Combat Extended</li>
+    </mods>
+		<match Class="PatchOperationSequence">
+		<operations>
+
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="AmogusRace"]</xpath>
+				<value>
+					<li Class="CombatExtended.RacePropertiesExtensionCE">
+						<bodyShape>Humanoid</bodyShape>
+					</li>
+				</value>
+			</li>
+
+			<li Class="PatchOperationSequence">
+				<success>Always</success>
+				<operations>
+					<li Class="PatchOperationTest">
+					<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="AmogusRace"]/comps</xpath>
+					<success>Invert</success>
+					</li>
+					<li Class="PatchOperationAdd">
+					<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="AmogusRace"]</xpath>
+						<value>
+							<comps />
+						</value>
+					</li>
+				</operations>
+			</li>
+		
+
+		
+			<li Class="PatchOperationAdd">
+			 <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="AmogusRace"]/statBases</xpath>
+				  <value>
+					<MeleeDodgeChance>100.10</MeleeDodgeChance>
+					<MeleeCritChance>58.00</MeleeCritChance>
+					<MeleeParryChance>0.85</MeleeParryChance>
+					<CarryWeight>90</CarryWeight>
+					<CarryBulk>40</CarryBulk>
+
+											
+				  </value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+			 <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="AmogusRace"]/statBases/ArmorRating_Blunt</xpath>
+				  <value>
+					<ArmorRating_Blunt>12.01</ArmorRating_Blunt>
+				  </value>
+			</li>
+			<li Class="PatchOperationReplace">
+			 <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="AmogusRace"]/statBases/ArmorRating_Sharp</xpath>
+				  <value>
+					<ArmorRating_Sharp>8.02</ArmorRating_Sharp>
+				  </value>
+			</li>
+
+		
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="AmogusRace"]/tools</xpath> 
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>right hand</label>
+							<capacities>
+								<li>Stab</li>
+							</capacities>
+							<power>15</power>
+							<cooldownTime>1.26</cooldownTime>
+							<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+							<armorPenetrationBlunt>12.45</armorPenetrationBlunt>
+							<armorPenetrationSharp>30.625</armorPenetrationSharp>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>right hand</label>
+							<capacities>
+								<li>Stab</li>
+							</capacities>
+							<power>15</power>
+							<cooldownTime>1.26</cooldownTime>
+							<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+							<armorPenetrationBlunt>12.45</armorPenetrationBlunt>
+							<armorPenetrationSharp>30.625</armorPenetrationSharp>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>head</label>
+							<capacities>
+								<li>Bite</li>
+							</capacities>
+							<power>15</power>
+							<cooldownTime>4.49</cooldownTime>
+							<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+							<chanceFactor>0.2</chanceFactor>
+							<armorPenetrationBlunt>12.45</armorPenetrationBlunt>
+							<armorPenetrationSharp>10.625</armorPenetrationSharp>
+						</li>
+					</tools>
+				</value>
+			</li>
+	
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="AmogusRace"]/comps</xpath>
+				<value>
+					<li>
+					  <compClass>CombatExtended.CompPawnGizmo</compClass>
+					</li>
+					<li Class="CombatExtended.CompProperties_Suppressable" />
+				</value>
+			</li>
+              <li Class="PatchOperationAddModExtension">
+		  <xpath>/Defs/PawnKindDef[defName="Bogus"]</xpath>
+		  <value>
+		    <li Class="CombatExtended.LoadoutPropertiesExtension">
+		  	<primaryMagazineCount>
+		  	  <min>10</min>
+		  	  <max>600</max>
+		  	</primaryMagazineCount>
+		  	<forcedSidearm>
+		  	  <sidearmMoney>
+		  		<min>1200</min>
+		  		<max>2500</max>
+		  	  </sidearmMoney>
+		  	  <weaponTags>
+		  		<li>CE_Sidearm_Melee</li>					
+		  	  </weaponTags>
+		  	</forcedSidearm>
+		    </li>				
+		  </value>
+		</li>
+
+
+		</operations>
+		</match>	
+	</Operation>
+  
+		
+</Patch>

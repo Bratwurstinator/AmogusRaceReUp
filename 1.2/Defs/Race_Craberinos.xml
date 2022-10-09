@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+    <AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+        <defName>AmogusRace</defName>
+        <label>amogus</label>
+        <description>When the impostor is sus</description>
+        <alienRace>
+            <graphicPaths>
+                 
+				<li>
+				
+					<lifeStageDefs>
+                    	<li><def>Amogus</def>
+						</li>
+                	</lifeStageDefs>
+					
+					<body>Crew/Body/</body>
+                    <head></head>
+					<customDrawSize>(0.8, 0.9)</customDrawSize>
+                </li>
+				
+            </graphicPaths>
+
+            <hairSettings>
+                <hasHair>false</hasHair>
+            </hairSettings>
+
+            <generalSettings>
+                <maleGenderProbability>0.5</maleGenderProbability>
+                <immuneToAge>false</immuneToAge>
+                <humanRecipeImport>true</humanRecipeImport>
+
+                <forcedRaceTraitEntries>
+                    <li>
+                        <defName>Psychopath</defName>
+                        <chance>30</chance>
+					</li>
+					<li>
+						<defName>Beauty</defName>
+						<degree>2</degree>
+                        <chance>20</chance>
+                    </li>
+                </forcedRaceTraitEntries>
+
+            <maxDamageForSocialfight>0</maxDamageForSocialfight>
+
+            <allowHumanBios>true</allowHumanBios>
+
+			<immuneToXenophobia>true</immuneToXenophobia>
+
+            <minAgeForAdulthood>12</minAgeForAdulthood>
+
+            <alienPartGenerator>
+                <aliencrowntypes>
+                    <li>Average_Normal</li>
+                </aliencrowntypes>
+
+                <alienbodytypes>
+                    <li>Male</li>
+                    <li>Female</li>
+                </alienbodytypes>
+
+                <useGenderedHeads>true</useGenderedHeads>
+                <useGenderedBodies>false</useGenderedBodies>
+				
+
+                <colorChannels>
+                    <li>
+                        <name>skin</name>
+                        <first Class="ColorGenerator_Options">
+                            <options>
+                                <li>
+                                    <weight>10</weight>
+                                    <only>RGB(0,0,0)</only>
+                                </li>
+                                <li>
+                                    <weight>10</weight>
+                                    <only>RGB(255,255,255)</only>
+                                </li>
+                                <li>
+                                    <weight>10</weight>
+                                    <only>RGB(255,0,0)</only>
+                                </li>
+								<li>
+                                    <weight>10</weight>
+                                    <only>RGB(0,255,0)</only>
+                                </li>
+								<li>
+                                    <weight>10</weight>
+                                    <only>RGB(0,0,255)</only>
+                                </li>
+                            </options>
+                        </first>
+						
+
+                       
+                    </li>
+					  <li>
+                        <name>Visor</name>
+                        <first Class="ColorGenerator_Options">
+                            <options>
+                                <li>
+                                    <weight>10</weight>
+                                    <only>RGB(220,220,255)</only>
+                                </li>
+                               
+                            </options>
+                        </first>
+						
+
+                       
+                    </li>
+                    
+                </colorChannels>
+
+                <bodyAddons>
+                
+                </bodyAddons>
+            </alienPartGenerator>
+        </generalSettings>
+		
+		
+
+        <thoughtSettings>
+			<replacerList>
+			</replacerList>
+			
+			<cannotReceiveThoughtsAtAll>false</cannotReceiveThoughtsAtAll>
+			
+			<cannotReceiveThoughts>
+				<li>Naked</li>
+			<li>AteCorpse</li>
+			<li>AteRawFood</li>
+			<li>AteHumanlikeMeatDirect</li>
+			<li>AteHumanlikeMeatAsIngredient</li>
+			</cannotReceiveThoughts>
+			
+			<canStillReceiveThoughts>
+			</canStillReceiveThoughts>
+			
+			<restrictedThoughts>
+			</restrictedThoughts>
+			
+			<butcherThoughtGeneral><!-- my Race reacts to all racese -->
+			</butcherThoughtGeneral>
+			
+			<ateThoughtGeneral><!-- my Race reacts to all racese -->
+			</ateThoughtGeneral>
+			
+			<butcherThoughtSpecific><!-- my Race reacts to a certain race -->
+			</butcherThoughtSpecific>
+			
+			<ateThoughtSpecific><!--  my Race reacts to a certain race -->
+			</ateThoughtSpecific>
+		</thoughtSettings>
+
+        <relationSettings><!--  chance factor for my Race to spawn with these relationships 1 would be Normal Human chance -->
+				<relationChanceModifierLover>1</relationChanceModifierLover>
+				<relationChanceModifierExLover>1</relationChanceModifierExLover>
+
+				<relationChanceModifierFiance>1</relationChanceModifierFiance>
+				<relationChanceModifierSpouse>1</relationChanceModifierSpouse>
+				<relationChanceModifierExSpouse>1</relationChanceModifierExSpouse>
+
+				<relationChanceModifierParent>1</relationChanceModifierParent>
+				<relationChanceModifierChild>1</relationChanceModifierChild>
+				<relationChanceModifierSibling>1</relationChanceModifierSibling>
+				
+				<renamer><!-- rename (Label) relationships for my Race -->
+				</renamer>
+		</relationSettings>
+
+    			<raceRestriction>
+				<researchList><!-- only my race -->
+				</researchList>
+				
+				<!-- all the below Lists use the same format -->
+				<onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel><!-- my race is limited -->
+				<apparelList>
+				</apparelList>
+				
+				<whiteApparelList><!-- if limtied not to these -->
+				</whiteApparelList>
+				
+				<onlyUseRaceRestrictedWeapons>false</onlyUseRaceRestrictedWeapons><!-- my race is limited -->
+				<weaponList>
+				</weaponList>
+				<whiteWeaponList>
+				</whiteWeaponList>
+				
+				<onlyDoRaceRestrictedRecipes>false</onlyDoRaceRestrictedRecipes><!-- my race is limited -->
+				<recipeList>
+				</recipeList>
+				<whiteRecipeList>
+				</whiteRecipeList>
+				
+				<onlyGetRaceRestrictedTraits>false</onlyGetRaceRestrictedTraits><!-- my race is limited -->
+				<traitList>
+				</traitList>
+				<whiteTraitList>
+				</whiteTraitList>
+
+				<onlyEatRaceRestrictedFood>false</onlyEatRaceRestrictedFood><!-- my race is limited -->
+				<foodList>
+				</foodList>
+				<whiteFoodList>
+				</whiteFoodList>
+				
+				<onlyBuildRaceRestrictedBuildings>false</onlyBuildRaceRestrictedBuildings><!-- my race is limited -->
+				<buildingList>
+				</buildingList>
+				<whiteBuildingList>
+				</whiteBuildingList>
+				
+				<!-- <onlyDoRaceRestrictedPlants>false</onlyDoRaceRestrictedPlants> // does not work my race is limited -->
+				<plantList>
+				</plantList>
+				<whitePlantList>
+				</whitePlantList>
+				
+				
+				<conceptList><!--when they get my race trigger --><!-- I don't understand this one -->
+				</conceptList>
+				
+				<workGiverList>
+				</workGiverList>
+			</raceRestriction>
+
+			<compatibility>
+				<!-- this is not really used for the most part but it allows other mods using C# to filter things related to your race -->
+				<isFlesh>true</isFlesh>
+				<isSentient>true</isSentient> 
+				<hasBlood>true</hasBlood>
+			</compatibility>
+		</alienRace>
+		<!-- Below is no longer HAR specific code and can be found in Vanilla -->
+		<race>
+			<!-- Basically human taken straight from Core Humans mostly -->
+			<!-- Choose your own values  -->
+			<thinkTreeMain>Humanlike</thinkTreeMain>
+			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+			<intelligence>Humanlike</intelligence>
+			<makesFootprints>true</makesFootprints>
+			<lifeExpectancy>50</lifeExpectancy>
+			<leatherDef>amogus_Joris</leatherDef>
+			<nameCategory>HumanStandard</nameCategory>
+			<body>Human</body>
+			<baseBodySize>1</baseBodySize>
+			<baseHealthScale>1</baseHealthScale>
+			<foodType>OmnivoreHuman</foodType>
+			<gestationPeriodDays>45</gestationPeriodDays>
+			<meatMarketValue>0.8</meatMarketValue>
+			<manhunterOnDamageChance>0.20</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>0.02</manhunterOnTameFailChance>
+			<litterSizeCurve>
+				<!-- how many babies are made unused in vanilla for humanlikes -->
+				<points>
+					<li>(0.5, 0)</li>
+					<li>(1, 1)</li>
+					<li>(1.01, 0.02)</li>
+					<li>(3.5, 0)</li>
+				</points>
+			</litterSizeCurve>
+			<lifeStageAges>
+				<!-- These affect stats and if your Race is ready to Lay eggs or be milked if you set that up in the LifeStage, it also determins when your Race is Sexualy Mature and can Reproduce which is not used by Humanlikes in Vanilla -->
+			
+				
+				<li>
+					<def>Amogus</def>
+							
+
+				</li>
+				
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+			<specialShadowData>
+				<volume>(0.3, 0.8, 0.4)</volume>
+				<offset>(0,0,-0.3)</offset>
+			</specialShadowData>
+			<ageGenerationCurve>
+				<!-- these values must be less than your youngest pawnkind and greater than your oldest pawn kind of this Race -->
+				<points>
+					<li>(14,0)</li>
+					<li>(16,50)</li>
+					<li>(50,100)</li>
+					<li>(60,20)</li>
+					<li>(70,18)</li>
+					<li>(80,1)</li>
+					<li>(90,0)</li>
+					<li>(100,0)</li>
+				</points>
+			</ageGenerationCurve>
+			<hediffGiverSets>
+					<li>OrganicStandard</li>
+					<li>Human</li>
+			</hediffGiverSets>
+					
+		</race>
+
+		<statBases>
+			<!-- These are the Human stats you should use your own refer to the Core files in = \RimWorld\Data\Core\Defs\Stats -->
+			<!-- Some stats are Inherited from the parent such as BasePawn commented below are the stats that are inherited -->
+			<MarketValue>1750</MarketValue>
+			<MoveSpeed>3.7</MoveSpeed>
+			<ComfyTemperatureMin>-900</ComfyTemperatureMin>
+			<ComfyTemperatureMax>90</ComfyTemperatureMax>
+			<LeatherAmount>50</LeatherAmount>
+			<RoyalFavorValue>3</RoyalFavorValue>
+			<Flammability>0.0</Flammability>
+			<IncomingDamageFactor>1</IncomingDamageFactor>
+			<AimingDelayFactor>0.5</AimingDelayFactor>
+			<ShootingAccuracyPawn>1</ShootingAccuracyPawn>
+			<ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+      		<ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+      		<PsychicSensitivity>5.00</PsychicSensitivity>
+		</statBases>
+		
+		<tools Inherit="False">
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>5.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>9.2</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>teeth</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>8.2</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.07</chanceFactor>
+				<soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
+				<soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.4</chanceFactor>
+			</li>
+		</tools>
+		
+		<recipes>
+		<!-- Just a normal list of recipes mostly not needed if using <humanRecipeImport>true</humanRecipeImport> asdie from adding non human recipes  -->
+		</recipes>
+		
+
+		
+		
+	
+</AlienRace.ThingDef_AlienRace>
+<LifeStageDef>
+    <defName>Amogus</defName>
+    <label>Amogus</label>
+    <visible>true</visible>
+    <reproductive>true</reproductive>
+    <milkable>true</milkable>
+    <shearable>true</shearable>
+  </LifeStageDef>
+   <PawnKindDef>
+        <defName>Bogus</defName>
+        <label>Amogus</label>
+        <race>AmogusRace</race>
+       
+
+        <combatPower>50</combatPower>
+		
+    
+    
+    <weaponMoney>250~345</weaponMoney>
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+    <techHediffsChance>0.04</techHediffsChance>
+    <techHediffsMoney>50~800</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+      <li>Simple</li>
+      <li>ImplantEmpireCommon</li>
+    </techHediffsTags>
+    <backstoryFiltersOverride>
+        <li>
+            <categories>
+                <li>Amoguus</li>
+            </categories>
+        </li>
+    </backstoryFiltersOverride>
+    </PawnKindDef>
+	
+  <AlienRace.BackstoryDef>
+    <defName>AmogusBackstory</defName>
+    <title>Amogus</title>
+    <titleShort>Sus</titleShort>
+    <baseDescription>This pawn is sus</baseDescription>
+     <spawnCategories>
+      <li>Amoguus</li>
+    </spawnCategories>
+    <skillGains>
+      <li>
+        <defName>Social</defName>
+        <amount>10</amount>
+      </li>
+    </skillGains>
+</AlienRace.BackstoryDef>
+   <!--Leather-->
+<ThingDef ParentName="LeatherBase">
+    <defName>amogus_Joris</defName>
+    <label>amogus leather</label>
+    <description>SUS.</description>
+    <graphicData>
+      <color>(233,233,233)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>14.0</MarketValue>
+      <StuffPower_Armor_Sharp>1.08</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.96</StuffPower_Armor_Blunt>
+      <StuffPower_Insulation_Cold>60</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>60</StuffPower_Insulation_Heat>
+    </statBases>
+    <stuffProps>
+      <color>(233,233,233)</color>
+      <commonality>0.0025</commonality>
+      <statFactors>
+        <MaxHitPoints>2.0</MaxHitPoints>
+        <Beauty>8</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+  <FactionDef ParentName="HumanFactionBase">
+		<defName>Amogah</defName>
+		<label>Amogus</label>
+    <description>Crew mates and impostors.</description>
+    <pawnsPlural>Crewmates?</pawnsPlural>
+    
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <canMakeRandomly>true</canMakeRandomly>
+  
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>mayor</leaderTitle>
+    <factionIconPath>World/JanPawel2/Home</factionIconPath>
+    <colorSpectrum>
+      <li>(0.64, 0.42, 0.36)</li>
+      <li>(0.47, 0.5, 0.91)</li>
+    </colorSpectrum>
+    <startingGoodwill>
+      <min>10</min>
+      <max>40</max>
+    </startingGoodwill>
+	 <backstoryFilters>
+      <li>
+        <categories>
+          <li>Outlander</li>
+        </categories>
+        <commonality>0.75</commonality>
+      </li>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+        <commonality>0.05</commonality>
+      </li>
+      <li>
+        <categories>
+          <li>Amoguus</li>
+        </categories>
+        <commonality>0.20</commonality>
+      </li>
+    </backstoryFilters>
+		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
+		
+		<techLevel>Industrial</techLevel>
+	
+		<hairTags>
+			<li>Rural</li>
+		</hairTags>
+    <naturalColonyGoodwill>
+      <min>0</min>
+      <max>5</max>
+    </naturalColonyGoodwill>
+    <caravanTraderKinds>
+      <li>Caravan_Outlander_BulkGoods</li>
+      <li>Caravan_Outlander_CombatSupplier</li>
+      <li>Caravan_Outlander_Exotic</li>
+      <li>Caravan_Outlander_PirateMerchant</li>
+    </caravanTraderKinds>
+    <visitorTraderKinds>
+      <li>Visitor_Neolithic_Standard</li>
+    </visitorTraderKinds>
+    <baseTraderKinds>
+      <li>Base_Outlander_Standard</li>
+    </baseTraderKinds>
+    <allowedArrivalTemperatureRange>
+      <min>-400</min>
+      <max>450</max>
+    </allowedArrivalTemperatureRange>
+	<maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(700, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <Bogus>50</Bogus>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <options>
+          <Bogus>50</Bogus>
+          <Beanos>1</Beanos>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+       <traders>
+          <Town_Trader>1</Town_Trader>
+        </traders>
+        <carriers>
+          <Muffalo>1</Muffalo>
+          <Dromedary>1</Dromedary>
+        </carriers>
+        <guards>
+          <Bogus>100</Bogus>
+        </guards>
+      </li>
+	  <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <Bogus>100</Bogus>
+          <Beanos>1</Beanos>
+        </options>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <Bogus>90</Bogus>
+          <Beanos>30</Beanos>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <settlementTexturePath>World/JanPawel2/Home</settlementTexturePath>
+  </FactionDef>
+  <!--<HediffDef ParentName="InfectionBase">
+    <defName>Xenonoris</defName>
+    <label>Beanos xenomorph embryo</label>
+    <description>Lol.</description>
+    <isBad>false</isBad>
+    <initialSeverity>0.25</initialSeverity>
+    <lethalSeverity>1</lethalSeverity>
+    <makesSickThought>true</makesSickThought>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <tendable>false</tendable>
+    <maxSeverity>1</maxSeverity>
+    <comps>
+       <li Class="HediffCompProperties_Immunizable">
+        <severityPerDayNotImmune>0.70</severityPerDayNotImmune>
+        <immunityPerDaySick>0.10</immunityPerDaySick>
+        <severityPerDayImmune>-1.0</severityPerDayImmune>
+        <immunityPerDayNotSick>-0.02</immunityPerDayNotSick>
+      </li>
+      
+
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>Sus Stab</label>
+            <capacities>
+              <li>Stab</li>
+            </capacities>
+            <power>120</power>
+            <cooldownTime>30</cooldownTime>
+            <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+            <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>initial</label>
+        <painFactor>1.10</painFactor>
+        <vomitMtbDays>4</vomitMtbDays>
+      </li>
+      <li>
+        <minSeverity>0.5</minSeverity>
+        <label>medium</label>
+        <painFactor>1.80</painFactor>
+        <vomitMtbDays>4</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.80</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>1</minSeverity>
+        <label>dead</label>
+        <painFactor>10.10</painFactor>
+        <vomitMtbDays>4</vomitMtbDays>
+      </li>
+     
+    </stages>
+</HediffDef>-->
+
+<FactionDef Parent="PlayerFactionBase">
+    <defName>AmogusPLayer</defName>
+    <label>Amogus</label>
+    <description>A community of amogus.</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>Bogus</basicMemberKind>
+    <pawnSingular>Crewmate</pawnSingular>
+    <pawnsPlural>Crewmates</pawnsPlural>
+    <techLevel>Industrial</techLevel>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Amoguus</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>World/JanPawel2/Home</factionIconPath>
+    <pawnNameMaker>NamerPersonTribal</pawnNameMaker>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+    <geneticVariance>1</geneticVariance>
+    <hairTags>
+      <li></li>
+    </hairTags>
+    <startingResearchTags>
+      <li>ClassicStart</li>
+    </startingResearchTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Hyperweave</li>
+      </thingDefs>
+    </apparelStuffFilter>
+	  <recipePrerequisiteTags>
+      <li>Industrial</li>
+    </recipePrerequisiteTags>
+    <colorSpectrum>
+      <li>(0, 0, 0)</li>
+    </colorSpectrum>
+    <settlementTexturePath>World/JanPawel2/Home</settlementTexturePath>
+  </FactionDef>
+  <ScenarioDef>
+    <defName>AmogusSetllers</defName>
+    <label>Amogus Settlers</label>
+    <description>Amogus settlers.</description>
+    <scenario>
+      <summary>Amoguses  making a colony.</summary>
+      <playerFaction>
+        <def>PlayerFaction</def>
+        <factionDef>AmogusPLayer</factionDef>
+      </playerFaction>
+		<parts>
+			<!-- Config pages -->
+			<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+				<def>ConfigPage_ConfigureStartingPawns</def>
+				<pawnCount>10</pawnCount>
+				<pawnChoiceCount>10</pawnChoiceCount>
+			</li>
+
+			<!-- Player starting stuff spawn method-->
+			<li Class="ScenPart_PlayerPawnsArriveMethod">
+				<def>PlayerPawnsArriveMethod</def>
+				<method>Standing</method>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>Pemmican</thingDef>
+				<count>80000</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>MedicineIndustrial</thingDef>
+				<count>320</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>Steel</thingDef>
+				<count>9000</count>
+			</li>
+		</parts>
+    </scenario>
+  </ScenarioDef>
+  
+</Defs>

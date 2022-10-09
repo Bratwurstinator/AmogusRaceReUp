@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+    <!-- Moje tata zlocinac iz rata -->
+
+<Patch>    
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Rimworld Bepsi</li>
+		</mods> 
+		<match Class="PatchOperationSequence">
+			<operations>
+
+				<!-- Vy se potrudite pa ga osudite -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="Bepsi"]</xpath>
+					<value>
+						<comps>
+                            <li Class="Poop.Granata">
+                                <Pollack>Beanos</Pollack>
+								<penis>Bogus</penis>
+                            </li>
+                        </comps>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+</Patch>

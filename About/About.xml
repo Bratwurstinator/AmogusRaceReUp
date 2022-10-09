@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Amogus Race</name>
+  <author>Caulaflower, ShakestheSpear</author>
+  <packageId>BionicFrog.AlienRaces.AmogusRace</packageId>
+  <supportedVersions>
+    <li>1.2</li>
+    <li>1.3</li>
+  </supportedVersions>
+  <url>Link</url>
+  <description>My mods are slowly becoming schizophrenic rambling.
+  </description>
+</ModMetaData>

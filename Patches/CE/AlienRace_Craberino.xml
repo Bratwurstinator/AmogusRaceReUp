@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Combat Extended</li>
+    </mods>
+		<match Class="PatchOperationSequence">
+		<operations>
+
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Dabean"]</xpath>
+				<value>
+					<li Class="CombatExtended.RacePropertiesExtensionCE">
+						<bodyShape>Humanoid</bodyShape>
+					</li>
+				</value>
+			</li>
+
+			<li Class="PatchOperationSequence">
+				<success>Always</success>
+				<operations>
+					<li Class="PatchOperationTest">
+					<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Dabean"]/comps</xpath>
+					<success>Invert</success>
+					</li>
+					<li Class="PatchOperationAdd">
+					<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Dabean"]</xpath>
+						<value>
+							<comps />
+						</value>
+					</li>
+				</operations>
+			</li>
+		
+
+		
+			<li Class="PatchOperationAdd">
+			 <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Dabean"]/statBases</xpath>
+				  <value>
+					<MeleeDodgeChance>100.10</MeleeDodgeChance>
+					<MeleeCritChance>58.00</MeleeCritChance>
+					<MeleeParryChance>0.85</MeleeParryChance>
+					<CarryWeight>900</CarryWeight>
+					<CarryBulk>400</CarryBulk>
+
+											
+				  </value>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+			 <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Dabean"]/statBases/ArmorRating_Blunt</xpath>
+				  <value>
+					<ArmorRating_Blunt>20.01</ArmorRating_Blunt>
+				  </value>
+			</li>
+			<li Class="PatchOperationReplace">
+			 <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Dabean"]/statBases/ArmorRating_Sharp</xpath>
+				  <value>
+					<ArmorRating_Sharp>20.02</ArmorRating_Sharp>
+				  </value>
+			</li>
+
+		
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Dabean"]/tools</xpath> 
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>right hand</label>
+							<capacities>
+								<li>Stab</li>
+							</capacities>
+							<power>20</power>
+							<cooldownTime>1.26</cooldownTime>
+							<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+							<armorPenetrationBlunt>12.45</armorPenetrationBlunt>
+							<armorPenetrationSharp>30.625</armorPenetrationSharp>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>right hand</label>
+							<capacities>
+								<li>Stab</li>
+							</capacities>
+							<power>20</power>
+							<cooldownTime>1.26</cooldownTime>
+							<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+							<armorPenetrationBlunt>12.45</armorPenetrationBlunt>
+							<armorPenetrationSharp>30.625</armorPenetrationSharp>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>head</label>
+							<capacities>
+								<li>Bite</li>
+							</capacities>
+							<power>20</power>
+							<cooldownTime>4.49</cooldownTime>
+							<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+							<chanceFactor>0.2</chanceFactor>
+							<armorPenetrationBlunt>12.45</armorPenetrationBlunt>
+							<armorPenetrationSharp>10.625</armorPenetrationSharp>
+						</li>
+					</tools>
+				</value>
+			</li>
+			
+	
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Dabean"]/comps</xpath>
+				<value>
+					<li>
+					  <compClass>CombatExtended.CompPawnGizmo</compClass>
+					</li>
+					<li Class="CombatExtended.CompProperties_Suppressable" />
+				</value>
+			</li>
+
+		</operations>
+		</match>	
+	</Operation>
+</Patch>
